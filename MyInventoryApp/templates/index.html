@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Inventory Tracker</title>
+    <meta charset="UTF-8">
+    <title>Inventory Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Inventory Tracker</h1>
+    </header>
+
+    <!-- ADD ITEM FORM -->
+    <section id="add-item">
+        <h2>Add a New Item</h2>
+        <form>
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required>
+            <br><br>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+            <br><br>
+
+            <label for="threshold">Reorder Threshold:</label>
+            <input type="number" id="threshold" name="threshold" required>
+            <br><br>
+
+            <input type="url" id="purchase-link" placeholder="Purchase Link (URL)">
+
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+
+    <!-- Inventory List -->
+    <section id="inventory">
+        <h2>Current Inventory</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Reorder Threshold</th>
+                    <th>Purchase Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will go here later with JS -->
+              
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2025 My Business App</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
